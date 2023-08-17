@@ -10,6 +10,6 @@ export class AppComponent implements OnInit {
   title = 'Task Tracker';
   tasks: Task[] = Tasks;
   ngOnInit(): void {
-    localStorage.setItem('tasks', JSON.stringify(this.tasks));
+    localStorage.setItem('tasks', JSON.stringify([]));
   }
 }
