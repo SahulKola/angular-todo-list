@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Tasks } from './mock-tasks';
 import { Task } from './Task';
 @Component({
@@ -6,10 +6,10 @@ import { Task } from './Task';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'Task Tracker';
   tasks: Task[] = Tasks;
-  ngOnInit(): void {
+  constructor() {
     if (!localStorage.getItem('tasks')) {
       localStorage.setItem('tasks', JSON.stringify([]));
     }

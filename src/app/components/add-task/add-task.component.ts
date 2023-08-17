@@ -9,6 +9,7 @@ import { UiService } from 'src/app/service/ui.service';
 })
 export class AddTaskComponent {
   @Output() onAddTask = new EventEmitter();
+  id: number = 0;
   text: string = ' ';
   day: string = ' ';
   remainder: boolean = false;
@@ -26,13 +27,14 @@ export class AddTaskComponent {
       return;
     }
     const newTask = {
+      id: this.id + 1,
       text: this.text,
       day: this.day,
       remainder: this.remainder,
     };
 
     this.onAddTask.emit(newTask);
-
+    this.id = this.id + 1;
     this.text = '';
     this.day = '';
     this.remainder = false;
