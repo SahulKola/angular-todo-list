@@ -18,6 +18,12 @@ body {
   border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 10%,
+    rgba(184, 215, 232, 1) 80%
+  );
 }
 .btn {
   display: inline-block;
